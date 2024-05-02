@@ -95,6 +95,54 @@ class SpindaConfig:
         return total_diff
 
 if __name__ == "__main__":
-    spin = SpindaConfig.from_personality(0x7a397866)
-    spin.render_pattern().show()
+    PID0000 = 0xFFF000F0
+    PID0001 = 0xFFF000CB
+    PID0010 = 0xFFF0D6F0
+    PID0011 = 0xFFF0D6CB
+    PID0100 = 0xFF8A00F0 
+    PID0101 = 0xFF8A00CB
+    PID0110 = 0xFF8AD6F0
+    PID0111 = 0xFF8AD6CB
+    PID1000 = 0x99F000F0
+    PID1001 = 0x99F000CB
+    PID1010 = 0x99F0D6F0
+    PID1011 = 0x99F0D6CB
+    PID1100 = 0x998A00F0
+    PID1101 = 0x998A00CB
+    PID1110 = 0x998AD6F0
+    PID1111 = 0x998AD6CB
+
+    spin = SpindaConfig.from_personality(PID0000)
+    spin.render_pattern().save("0000.png")
+    spin = SpindaConfig.from_personality(PID0001)
+    spin.render_pattern().save("0001.png")
+    spin = SpindaConfig.from_personality(PID0010)
+    spin.render_pattern().save("0010.png")
+    spin = SpindaConfig.from_personality(PID0011)
+    spin.render_pattern().save("0011.png")
+    spin = SpindaConfig.from_personality(PID0100)
+    spin.render_pattern().save("0100.png")
+    spin = SpindaConfig.from_personality(PID0101)
+    spin.render_pattern().save("0101.png")
+    spin = SpindaConfig.from_personality(PID0110)
+    spin.render_pattern().save("0110.png")
+    spin = SpindaConfig.from_personality(PID0111)
+    spin.render_pattern().save("0111.png")
+
+    spin = SpindaConfig.from_personality(PID1000)
+    spin.render_pattern().save("1000.png")
+    spin = SpindaConfig.from_personality(PID1001)
+    spin.render_pattern().save("1001.png")
+    spin = SpindaConfig.from_personality(PID1010)
+    spin.render_pattern().save("1010.png")
+    spin = SpindaConfig.from_personality(PID1011)
+    spin.render_pattern().save("1011.png")
+    spin = SpindaConfig.from_personality(PID1100)
+    spin.render_pattern().save("1100.png")
+    spin = SpindaConfig.from_personality(PID1101)
+    spin.render_pattern().save("1101.png")
+    spin = SpindaConfig.from_personality(PID1110)
+    spin.render_pattern().save("1110.png")
+    spin = SpindaConfig.from_personality(PID1111)
+    spin.render_pattern().save("1111.png")
     #print(hex(spin.get_personality()))
